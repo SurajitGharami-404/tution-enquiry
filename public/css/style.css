@@ -1,0 +1,353 @@
+/* --- CSS Variables --- */
+:root {
+  /* Colors */
+  --primary-color: hsl(207, 100%, 51%);
+  --primary-color-hover: hsl(207, 100%, 48%);
+  --secondary-color: hsl(38, 17%, 95%);
+  --secondary-color-hover: hsl(38, 17%, 92%);
+  --success-color: hsl(134, 61%, 41%);
+  --success-color-foreground: hsl(134, 61%, 90%);
+  --success-color-hover: hsl(134, 61%, 38%);
+  --warning-color: hsl(45, 100%, 51%);
+  --warning-color-foreground: hsl(45, 100%, 95%);
+  --warning-color-hover: hsl(45, 100%, 48%);
+  --danger-color: hsl(354, 70%, 54%);
+  --danger-color-foreground: hsl(354, 70%, 90%);
+  --danger-color-hover: hsl(354, 70%, 46%);
+  --info-color: hsl(188, 78%, 41%);
+  --info-color-foreground: hsl(188, 78%, 95%);
+
+  --background-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-color: #212529;
+  --light-text-color: #6c757d;
+  --border-color: #e9ecef;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+
+  /* Font family */
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
+
+  /* Font size */
+  --text-xs: clamp(0.625rem, 0.6rem + 0.2vw, 0.6875rem); /* ~10px to ~11px */
+  --text-sm: clamp(0.75rem, 0.7rem + 0.3vw, 0.8125rem); /* ~12px to ~13px */
+  --text-md: clamp(0.875rem, 0.8rem + 0.4vw, 0.9375rem); /* ~14px to ~15px */
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.0625rem); /* ~16px to ~17px */
+  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.1875rem); /* ~18px to ~19px */
+  --text-xl: clamp(1.25rem, 1.1rem + 0.7vw, 1.3125rem); /* ~20px to ~21px */
+  --text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.625rem); /* ~24px to ~26px */
+  --text-3xl: clamp(1.75rem, 1.6rem + 0.9vw, 1.875rem); /* ~28px to ~30px */
+  --text-4xl: clamp(2rem, 1.8rem + 1vw, 2.125rem); /* ~32px to ~34px */
+  --text-5xl: clamp(2.25rem, 2rem + 1vw, 2.5rem); /* ~32px to ~34px */
+
+  /* Font weight */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-circle: 100%;
+  --border-radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 0.125rem 0.25rem var(--shadow-color);
+  --shadow-md: 0 0.5rem 1rem var(--shadow-color);
+  --shadow-lg: 0 1rem 3rem var(--shadow-color);
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+
+  /* Nav */
+  --nav-height: 4.5rem;
+
+  /* KPI */
+  --kpi-data-color: var(--primary-color);
+  --kpi-icon-color: var(--primary-color);
+}
+
+body {
+  font-family: var(--font-family-inter);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-bold);
+  color: var(--text-color);
+}
+
+a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+ul {
+  list-style: none;
+}
+
+/* Button */
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  background-color: transparent;
+  min-height: var(--text-4xl);
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+  border-radius: var(--border-radius-sm);
+  padding-inline: var(--spacing-sm);
+  padding-block: var(--spacing-xs);
+  transition: background-color 0.3s ease;
+  &.primary {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+  &.danger {
+    border: 1px solid var(--danger-color);
+    background-color: var(--danger-color);
+    color: var(--surface-color);
+    &:hover {
+      background-color: var(--danger-color-hover);
+    }
+  }
+  &.success {
+    border: 1px solid var(--success-color);
+    background-color: var(--success-color);
+    color: var(--surface-color);
+    &:hover {
+      background-color: var(--success-color-hover);
+    }
+  }
+  &.secondary {
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    &:hover {
+      background-color: var(--secondary-color-hover);
+    }
+  }
+  &.ghost {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--text-color);
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+}
+
+/* Navbar */
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+  padding-block: var(--spacing-sm);
+  height: var(--nav-height);
+  z-index: 999;
+}
+.nav-brand {
+  font-family: var(--font-family-poppins);
+  font-size: var(--text-3xl);
+  color: var(--text-color);
+  font-weight: var(--font-semibold);
+  & span {
+    color: var(--primary-color);
+  }
+}
+
+.nav-mobile__btn {
+  font-size: var(--text-2xl);
+}
+
+.nav-mobile__menu {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  right: 0;
+  height: 100vh;
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-md);
+  transform: translateX(200%);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: 1000;
+  &.open {
+    transform: translateX(0);
+  }
+}
+.nav-mobile__menu-overlay {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.nav-mobile__menu .nav-link-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--light-text-color);
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  padding: 0.6875rem;
+  width: 100%;
+  border-left: 0.125rem solid transparent;
+  transition: all 0.3s ease;
+  &.active,
+  &:hover {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+  }
+  &.active {
+    border-color: var(--primary-color);
+  }
+}
+
+.nav-desktop__menu {
+  gap: var(--spacing-sm);
+}
+.nav-desktop__menu .nav-link-custom {
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  color: var(--light-text-color);
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-sm);
+  transition: all 0.3s ease;
+  &.active,
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+/* Main Content */
+.main-content {
+  min-height: 100vh;
+  padding-block: var(--spacing-lg);
+}
+
+.page-heading {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--spacing-lg);
+  color: var(--light-text-color);
+}
+
+/* Custom Card */
+.card-custom {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.card-custom:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-custom-header,
+.card-custom-body {
+  padding: var(--spacing-md);
+}
+.card-custom-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-custom-title {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+}
+
+/* KPI Card */
+
+.kpi {
+  display: flex;
+  align-items: first baseline;
+  gap: var(--spacing-lg);
+}
+
+.kpi-icon {
+  color: var(--kpi-icon-color);
+  font-size: var(--text-3xl);
+}
+
+.kpi-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.kpi-data,
+.kpi-label {
+  margin-bottom: 0;
+}
+.kpi-label {
+  font-size: var(--text-md);
+  font-weight: var(--font-normal);
+  color: var(--light-text-color);
+}
+.kpi-data {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+  color: var(--kpi-data-color);
+}
+
+/* Badge Custom */
+
+.badge-custom {
+  padding-block: var(--spacing-xs);
+  padding-inline: var(--spacing-sm);
+  font-size: var(--text-sm);
+  border-radius: var(--border-radius-pill);
+
+  &.danger {
+    background-color: var(--danger-color);
+    color: var(--surface-color);
+    border: 1px solid var(--danger-color);
+  }
+  &.info {
+    background-color: var(--info-color-foreground);
+    color: var(--info-color);
+    border: 1px solid var(--info-color);
+  }
+  &.warning {
+    background-color: var(--warning-color);
+    color: var(--text-color);
+    border: 1px solid var(--warning-color);
+  }
+  &.success {
+    background-color: var(--success-color-foreground);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+  }
+}
