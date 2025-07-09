@@ -10,6 +10,14 @@ Whether you're running a small coaching institute or a large tutoring organizati
 - Improve response times and record-keeping
 
 ---
+## 🎥 Demo Video
+
+Watch the demo of Tute.io Enquiry in action:  
+[![Watch the video]](https://youtu.be/JwDwuebwrvk)
+
+---
+
+---
 
 ## 🖼️ Screenshots
 
@@ -60,14 +68,6 @@ Whether you're running a small coaching institute or a large tutoring organizati
 ### Edit Enquiry Page
 
 ![Edit Enquiry Page](public/assets/edit-enquiry-page.png)
-
-
----
-
-## 🎥 Demo Video
-
-Watch the demo of Tute.io Enquiry in action:  
-[![Watch the video](public/assets/home-page.png)](https://youtu.be/JwDwuebwrvk)
 
 ---
 
