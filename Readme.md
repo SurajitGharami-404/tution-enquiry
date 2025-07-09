@@ -12,8 +12,7 @@ Whether you're running a small coaching institute or a large tutoring organizati
 ---
 ## 🎥 Demo Video
 
-Watch the demo of Tute.io Enquiry in action:  
-https://youtu.be/JwDwuebwrvk
+Watch the demo of Tute.io Enquiry in action:  https://youtu.be/JwDwuebwrvk
 
 ---
 
